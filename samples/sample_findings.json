@@ -1,0 +1,42 @@
+[
+  {
+    "resource": "demo-public-bucket",
+    "check": "s3_public_access_block",
+    "status": "FAIL",
+    "severity": "HIGH",
+    "message": "One or more public access block settings are disabled.",
+    "recommendation": "Review exposure requirements and enable all four public access block settings where appropriate."
+  },
+  {
+    "resource": "demo-public-bucket",
+    "check": "s3_default_encryption",
+    "status": "PASS",
+    "severity": "INFO",
+    "message": "Default server-side encryption is configured.",
+    "recommendation": "No action required."
+  },
+  {
+    "resource": "sg-demo123",
+    "check": "ec2_public_admin_ingress",
+    "status": "FAIL",
+    "severity": "HIGH",
+    "message": "A security group allows public ingress to SSH/RDP or all protocols.",
+    "recommendation": "Restrict administrative access to trusted IP ranges or a managed access path."
+  },
+  {
+    "resource": "vol-demo123",
+    "check": "ebs_encryption",
+    "status": "FAIL",
+    "severity": "MEDIUM",
+    "message": "EBS volume encryption is disabled.",
+    "recommendation": "Plan an encrypted replacement volume and migration using AWS guidance."
+  },
+  {
+    "resource": "demo-trail",
+    "check": "cloudtrail_logging",
+    "status": "PASS",
+    "severity": "INFO",
+    "message": "CloudTrail is currently logging.",
+    "recommendation": "No action required."
+  }
+]
