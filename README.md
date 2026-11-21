@@ -90,6 +90,15 @@ EC2 and CloudTrail checks are regional. Run a scan in each relevant region. Miss
 
 ## Example output
 
+Running `python -m cloudshield.cli --demo` with the bundled sample dataset produces a summary similar to:
+
+```text
+CloudShield scan complete: Demo data (no AWS connection)
+Checks: 5 | Passed: 2 | Failed: 3 | Errors: 0
+JSON report: reports/cloudshield-report.json
+HTML report: reports/cloudshield-report.html
+```
+
 The demo dataset contains synthetic examples of passing and failing checks. These are sample records, not findings from a real AWS account.
 
 ## Limitations
